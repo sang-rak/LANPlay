@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>meets</h2>
+    <h2>meets</h2>
+    <p>{{ meets.meet_id }}</p>
+    {% for person in people %}
+        <h3>{{ person.username }}</h3>
+    {% endfor %}
+    {% comment %} <p>{{ request.user.username }}</p> {% endcomment %}
+    <table class="d-flex">
+        <tr>
+            <td width="100%">
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+                <img src="http://127.0.0.1:8000/meets/detectme" style="width:400px;" />
+            </td>
+        </tr>
+    </table>
 {% endblock content %}
-
-

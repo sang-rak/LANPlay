@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'meets'
 urlpatterns = [
-    path('<int:room_id>', views.meet, name='meet')
+    path('<int:meet_id>/', views.meet, name='meet'),
+    path('detectme/', views.detectme, name="detectme"),
 ]

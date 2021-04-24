@@ -37,7 +37,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -45,6 +45,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'rooms',
+    'meets',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
