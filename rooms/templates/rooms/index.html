@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>INDEX</h2>
+  {% for room in rooms %}
+    <a class='btn btn-primary' href="{% url 'meets:meet' room.pk %}">({{room.pk}}) 입장</a>
+  {% endfor %}
+  
+  {% comment %} <a class='btn btn-primary' href="{% url 'meets:meet' '2' %}">(2) 입장</a> {% endcomment %}
+  
+{% endblock content %}

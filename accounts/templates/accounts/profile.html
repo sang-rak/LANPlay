@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ person.username }}님의 프로필</h1>
+  {% comment %} 긴문장 코드 전환 가능 with 사용 {% endcomment %}
+  <hr>
+  <a href="{% url 'accounts:update' %}">[회원정보수정]</a>
+  <hr>
+  <form action="{% url 'accounts:delete' %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="탈퇴">
+  </form>
+  <hr>
+  <a href="{% url 'rooms:index' %}">[BACK]</a>
+{% endblock content %}
+
