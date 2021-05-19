@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django',
+        'ENGINE': 'djongo',
         'NAME': 'admin',
         'USER': 'admin',  # 데이터베이스 계정
         'PASSWORD': 'lanplay!@34',  # 계정 비밀번호
