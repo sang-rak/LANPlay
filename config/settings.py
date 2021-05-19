@@ -100,13 +100,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'admin',
+        'USER': 'admin',  # 데이터베이스 계정
+        'PASSWORD': 'lanplay!@34',  # 계정 비밀번호
+        'HOST': '18.116.44.90',  # 데이테베이스 주소(IP)
+        'PORT': '27017',  # 데이터베이스 포트(보통은 27017)
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
