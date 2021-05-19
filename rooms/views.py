@@ -5,7 +5,7 @@ def index(request):
     rooms = Meets.objects.all()
 
     context = {
-        'rooms' : rooms,
+        'rooms': rooms,
     }
 
     return render(request, 'rooms/index.html', context)
