@@ -66,21 +66,33 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates' ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [ BASE_DIR / 'templates' ],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'admin',
+        'USER': 'admin',  # 데이터베이스 계정
+        'PASSWORD': 'lanplay!@34',  # 계정 비밀번호
+        'HOST': '18.116.44.90',  # 데이테베이스 주소(IP)
+        'PORT': '27017',  # 데이터베이스 포트(보통은 27017)
+    }
+}
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
